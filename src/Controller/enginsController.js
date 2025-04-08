@@ -4,7 +4,6 @@ exports.getAll = async (req, res) => {
     const engins = await Engin.getAllEngins();
     res.json(engins);
 };
-
 exports.getOne = async (req, res) => {
     const engin = await Engin.getEnginById(req.params.id);
     if (!engin) return res.status(404).json({ message: "Engin non trouvé" });
